@@ -31,9 +31,14 @@ extension PersonsListViewController {
         cell.contentConfiguration = content
         return cell
     }
-    
+
+}
+
+//MARK: UITableViewDelegate
+extension PersonsListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showDetails", sender: indexPath)
     }
 }
+
 

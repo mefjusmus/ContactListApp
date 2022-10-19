@@ -20,7 +20,4 @@ class DetailsViewController: UIViewController {
         phoneLabel.text = "Phone: \(person.phone)"
         emailLabel.text = "E-mail: \(person.email)"
     }
-    
-
-
 }

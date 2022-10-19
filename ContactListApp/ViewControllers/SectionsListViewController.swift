@@ -11,13 +11,6 @@ class SectionsListViewController: UITableViewController {
 
     private let persons = Person.getPersons()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-}
-
-extension SectionsListViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return persons.count
     }
@@ -38,13 +31,12 @@ extension SectionsListViewController {
         case 0:
             content.text = "Phone: \(persons[indexPath.section].phone)"
             content.image = UIImage(systemName: "phone")
-        case 1:
+        default:
             content.text = "Email: \(persons[indexPath.section].email)"
             content.image = UIImage(systemName: "mail")
-        default:
-            break
         }
         cell.contentConfiguration = content
         return cell
     }
+    
 }
